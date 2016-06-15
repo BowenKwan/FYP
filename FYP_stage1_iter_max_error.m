@@ -1,4 +1,4 @@
-FYP_set_plant1_para_final_final
+
 res=[]
 exitflag_iter=[]
 k_v_m=[]
@@ -27,9 +27,9 @@ f=-[zeros(1,j-1) 1 zeros(1,N-j)]*[zeros(N,6*N) 2^(-l)*eye(N,N) -eye(N) -eye(N) z
 %max error sum
 %f=-[zeros(1,j-1) 1 zeros(1,N-j)]*[zeros(N,N) eye(N,N) zeros(N,N) eye(N,N)/Beta zeros(N,N) -eye(N,N) zeros(N,N) -K*eye(N,N) zeros(N,N) zeros(N,N)];
 
-FYP_stage1_plant1_3error_round_final_final;
+FYP_stage1_plant1_4error_round;
 exitflag_iter=[exitflag_iter exitflag]
-SimOut = sim('discrete_p1P_3error_round_additive', 'ReturnWorkspaceOutputs', 'on');
+SimOut = sim('discrete_p1P_4error_round_additive', 'ReturnWorkspaceOutputs', 'on');
 simout=SimOut.get('simout');
 res=[res simout];
 r_p1_m_M=[r_p1_m_M r_p1];
